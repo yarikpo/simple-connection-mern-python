@@ -25,8 +25,8 @@ router.post('/api/newTask', (req, res) => {
         console.log(`child process closed with exit code ${code}.`);
 
         const task = {
-            // input: req.body.input, 
-            input: receivedData,
+            input: req.body.input, 
+            result: receivedData,
             select: req.body.select,
             id: uuidv4()
         }

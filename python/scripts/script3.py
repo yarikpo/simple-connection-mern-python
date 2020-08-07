@@ -1,2 +1,2 @@
 import sys
-print(str(sys.argv[1])[::-1])
+print(str(sys.argv[1])[::-1], end='')

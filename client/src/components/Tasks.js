@@ -21,25 +21,6 @@ class Tasks extends React.Component {
         .catch(err => {console.log(err)})
   }
 
-
-//   componentDidMount() {
-//     fetch('http://localhost:19090/api/tasks')
-//     .then(res => res.json())
-//     .then((data) => {
-//       this.setState({ tasks: data })
-//     })
-//     .catch(console.log)
-//   }
-
-//   componentDidMount() {
-//       fetch("http://localhost:19090/api/tasks")
-//         .then(res => res.json())
-//         .then(res => {
-//             this.setState({ tasks: res });
-//         })
-//         .catch(err => { console.log(err) });
-//   }
-
   handleClick(e) {
     e.preventDefault();
     // const trs = JSON.stringify(this.state.tasks);
@@ -58,6 +39,7 @@ class Tasks extends React.Component {
                   input: {item.input}
                   <br />
                   select: {item.select}
+                  <br />
                   <Link to={'/tasks/' + item.id} >Solution</Link>
                 </li>
             })}
